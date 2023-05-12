@@ -4509,7 +4509,7 @@ router.get('/indexNew', function (req, res) {
 	res.render('indexNew', { layout: 'indexNew' });
 	//                  ↑↑ сюди вводимо JSON дані
 });
-
+//========================================================
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки

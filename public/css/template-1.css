@@ -93,14 +93,15 @@
     text-align: center;
 }
 
+/*
 .hero_text {
     color: #212529;
     font-size: 20px;
     text-align: center;
     max-width: 585px;
     margin: 0 auto;
-
 }
+*/
 
 .plans_card:not(:last-of-type) {
     margin-right: 24px;
@@ -128,8 +129,6 @@
 
     vertical-align: sub;
 }
-
-
 
 .card_block {
     text-align: center;
@@ -185,12 +184,14 @@ h1 {
     visibility: hidden;
 }
 
+/*
 .hero_text {
     background: gray;
 
     max-width: 200px;
     width: min-content;
 }
+*/
 
 .overflow {
     overflow-wrap: anywhere;
@@ -205,4 +206,17 @@ h1 {
     overflow: hidden;
     text-overflow: ellipsis;
 
+    white-space: nowrap;
+}
+
+body {
+    background: red;
+}
+
+.page {
+    background: transparent;
+}
+
+.hero_text {
+    background-image: url ("/img/test.png");
 }
