@@ -33,7 +33,25 @@
             {{/each}}
         </main>
     </div>
-
+    <div class="page_block">
+        <div>
+            <table class="table">
+                <caption>My table</caption>
+                <tbody>
+                    {{#each footer}}
+                    <tr>
+                        {{#each links}}
+                        <td>
+                            {{text}}
+                        </td>
+                        {{/each}}
+                        <td></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
     <div class="page_block">
         <footer class="row footer">
             <div class="col-3">
