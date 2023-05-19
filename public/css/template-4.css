@@ -155,15 +155,19 @@
 }
 
 .main_button {
-    display: flex;
-    background: var(--color-text);
+    text-decoration: none;
     color: var(--color-white);
-    text-align: center;
-    align-items: center;
-    font-weight: var(--weight-text);
-    size: var(--size-d);
 
-    border-radius: var(--border-radius);
+    max-width: 240px;
+    width: 100%;
+
+    display: inline-block;
+    font-size: var(--size-d);
+    padding: var(--space-m)var(--space-xm);
+
+    background: gray;
+    border-radius: 4px;
+    text-align: center
 }
 
 .featured {
