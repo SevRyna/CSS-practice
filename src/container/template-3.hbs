@@ -4,9 +4,9 @@
 --}}
 
 <header class="header">
-    <div class="">
+    <a href="# test">
         {{> logo}}
-    </div>
+    </a>
 
     <nav1 class="header_nav1">
         <div class="header_nav1_right">
@@ -31,6 +31,13 @@
 </div>
 {{/with}}
 
+<div class="modal">
+    {{hero.text}} {{hero.text}}
+    <img src="{{hero.photo}}" alt="hero image" class="hero_image">
+    <div class="modal_text">{{hero.text}} {{hero.text}}</div>
+</div>
+
+
 <main class="blog">
     {{#each blog}}
     {{>cardblog data=this}}
@@ -50,7 +57,7 @@
 {{/with}}
 
 
-<footer class="footer">
+<footer class="footer" id"test">
     <div>
         {{> logo}}
         <span class="footer_copyright">Copyright 2023-2024</span>
