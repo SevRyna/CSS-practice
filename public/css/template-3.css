@@ -51,15 +51,14 @@
     display: flex;
     justify-content: space-between;
 
-    position: sticky;
+    position: fixed;
 
     max-width: var(--page-width);
     width: 100%;
 
     top: 0;
-    /*left: calc(50%(var(--page-width)/2));*/
-
-    background-color: var(--color-white);
+    left: calc(50%-(var(--page-width)/2));
+    */ background-color: var(--color-white);
     z-index: 1;
 }
 
@@ -283,10 +282,14 @@
 
 .hero_slider_left {
     left: var(--space-l);
+    position: absolute;
+    top: 250px;
 }
 
 .hero_slider_right {
     right: var(--space-l);
+    position: absolute;
+    top: 250px;
 }
 
 .modal {
