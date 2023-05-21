@@ -150,7 +150,6 @@
 
 .hero_content {
     display: flex;
-    align-items: center;
     flex-direction: column;
     gap: var(--space-l);
 }
