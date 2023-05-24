@@ -1,0 +1,53 @@
+{{!--
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+--}}
+
+<header class="header">
+    <div class="">
+        {{> logo}}
+    </div>
+
+    <nav1 class="header_nav1">
+        <div class="header_nav1_right">
+            {{>nav1 list=header}}
+        </div>
+    </nav1>
+</header>
+{{#with main}}
+<div class="main">
+    <img src="{{image}}" alt="main image" class="main_image">
+    <div class="main_heading">
+        <h1 class="main_heading">{{heading}}</h1>
+        <p class=" main_descriotion">{{descriotion}}</p>
+        <div class="main_action">
+            <a class="main_button" href="{{href}}">{{button}}</a>
+        </div>
+    </div>
+</div>
+{{/with}}
+
+<div class="featured">
+    {{#each featured}}
+    {{>cardfeatured data=this}}
+    {{/each}}
+</div>
+
+<div class="actions">
+    {{#each actions}}
+    {{>cardactions data=this}}
+    {{/each}}
+</div>
+
+<footer class="footer">
+    <div>
+        {{> logo}}
+        <span class="footer_copyright">Copyright 2023-2024</span>
+    </div>
+    {{#each footer}}
+    <div>
+        <span class="footer_title">{{title}}</span>
+        {{>nav1 list=links isVertical=true}}
+    </div>
+    {{/each}}
+</footer>
