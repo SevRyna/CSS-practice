@@ -122,139 +122,72 @@
     display: block;
     margin-bottom: var(--space-l);
 
-    font-weight: var(--weight-title);
+    font-weight: var(--weight-title)
 }
 
 .main {
     display: flex;
-    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 1000px;
 
-    gap: 40px;
+    gap: 24px;
 }
 
-.messages {
-    max-width: 620px;
-    width: 100%;
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 582px;
+    height: 266px;
 
     background-color: var(--color-white);
     border-radius: var(--border-radius-d);
 
     box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.1);
 
-    padding: var(--space-l);
-
-    display: flex;
-    flex-direction: column;
     gap: var(--space-l);
 }
 
-.messages_title {
-    font-size: var(--space-b);
+.info_title {
+    width: 582px;
+    height: 134px;
+    font-size: 56px;
+    font-style: normal;
     color: var(--color-title);
-    font-weight: var(--weight-text);
+    font-weight: 700px;
+    line-height: 120%;
 
-    padding-bottom: var(--space-m);
     border-bottom: 1px solid var(--color-border);
 }
 
-.messages_link {
-    color: var(--color-primary);
-    font-size: var(--size-s);
-    align-self: flex-end;
-    text-decoration: none;
-
-    transition-duration: 0.7s;
-    transition-property: opacity;
-
-    border-bottom: 1px solid transparent;
-}
-
-.messages_link:hover {
-    opacity: 0.7;
-    border-color: var(--color-primary);
-}
-
-.msg {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-m);
-
-    padding-bottom: var(--space-m);
-    border-bottom: 1px solid var(--color-border);
-
-    position: relative;
-
-    padding-right: var(--space-b);
-}
-
-.msg_name {
-    font-size: var(--size-d);
-    color: var(--color-title);
-    font-weight: var(--weight-title);
-}
-
-.msg_text {
-    font-size: var(--size-d);
+.info_description {
+    width: 412px;
+    height: 108px;
+    font-size: var(--size-b);
     color: var(--color-title);
     font-weight: var(--weight-text);
-}
 
-.msg_day {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.advantages {
-    display: flex;
-    gap: var(--space-l);
-}
-
-.advantages>div {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #e4eaf2;
-    border-radius: var(--border-radius-d);
-    padding: var(--space-l);
-    gap: var(--space-s);
-
-    /*width: 100%;*/
-}
-
-.advantages>div>strong {
-    color: var(--color-title);
-    font-weight: var(--weight-title);
-    font-size: 10px;
-}
-
-.advantages>div>p {
-    color: #767676;
-    font-size: var(--size-d);
-    line-height: 150%;
-}
-
-.advantages>div:nth-of-type {
-    flex-grow: 1;
-    width: 100%;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .form {
-    max-width: 340px;
-    width: 100%;
 
-    background-color: var(--color-white);
+    background-color: #f8f9fa;
     border-radius: var(--border-radius-d);
 
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 
-    padding: var(--space-l);
-
     display: flex;
     flex-direction: column;
-    gap: var(--space-l);
+    gap: 20px;
+    padding: var(--space-l);
 }
 
 .form_title {
+    width: 582px;
+    height: 266px;
+    top: 43.5px;
     text-align: center;
     font-size: var(--size-b);
     font-weight: var(--weight-text);
@@ -262,8 +195,10 @@
 }
 
 .form_info {
-    text-align: center;
-    font-size: var(--size-d);
+
+
+    align-items: center;
+    font-size: var(--size-s);
     font-weight: var(--weight-text);
     color: #6c757d;
 }
@@ -290,9 +225,11 @@
     display: flex;
     gap: var(--space-m);
     flex-direction: column;
+
 }
 
 .form_input {
+
     padding: var(--space-xm);
     border: 1px solid #ced4da;
     border-radius: var(--border-radius-s);
@@ -301,6 +238,7 @@
 .form_input::placeholder {
     color: var(--color-title);
     font-size: var(--size-d);
+    background-color: var(--color-white);
 }
 
 .form_checkbox_block {
@@ -332,4 +270,129 @@
     color: var(--color-title);
     font-size: var(--size-d);
     cursor: pointer;
+}
+
+.updates {
+    width: 1000px;
+    height: 361px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: var(--space-l);
+    padding: var(--space-l);
+}
+
+.updates_title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 0 12px;
+    gap: 10px;
+    color: var(--color-title);
+    font-size: 36px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.color_box {
+    width: 33px;
+    height: 33px;
+    background-color: red;
+}
+
+.cb-0 .color_box {
+    background-color: blue;
+}
+
+.cb-1 .color_box {
+    background-color: red;
+}
+
+.cb-2 .color_box {
+    background-color: rgb(73, 73, 95);
+}
+
+div.color_box {
+    position: absolute;
+}
+
+div.color_box {
+    position: relative;
+    margin-right: 7px;
+}
+
+td.cb {
+    margin-top: 3px;
+    display: block;
+}
+
+.text_box div {
+    margin-top: 5px 5px;
+}
+
+.expirience {
+    position: relative;
+    gap: var(--space-l);
+    padding: 24px 28px;
+    align-self: stretch;
+
+}
+
+.expirience_title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--space-l);
+    color: var(--color-title);
+    font-size: 56px;
+    font-style: normal;
+}
+
+.expirience_badge {
+    position: absolute;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    padding: 3px 10px;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    top: 0px;
+    right: -74px;
+}
+
+.list_i {
+    width: 944px;
+    height: 132px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-l);
+    background: var(--color-title);
+    align-self: stretch;
+    color: var(--color-border);
+    border-radius: 10px;
+
+
+}
+
+.expirience-item {
+    width: 1000px;
+    height: 132px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: var(--space-l);
+    padding: 24px 28px 24px 28px;
+
+}
+
+.expirience_details {
+    width: 180px;
+    height: 30px;
+
 }
