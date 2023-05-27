@@ -1,0 +1,18 @@
+<footer>
+    <div class="footerDark">
+        {{#with footer}}
+        <table>
+            <tr>
+                {{#each pages}}
+                <td>
+                    <a href="{{path}}">{{name}}</a>
+                </td>
+                {{/each}}
+            </tr>
+        </table>
+
+        copyright: {{copyright}}
+        {{/with}}
+
+    </div>
+</footer>

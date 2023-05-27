@@ -1,0 +1,23 @@
+{{#with header}}
+<div class="headerDarkBlock">
+    <div class="logo">{{brandName}}</div>
+    <ul class="nav1 headerDark">
+        {{#each links}}
+        <li class="nav1-item">
+            <a class="nav1-link" href="{{url}}">{{text}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<div class="clear"></div>
+
+{{#with ad}}
+<div class="headerDarkBlockAdd">
+    <div class="addContainer">
+        <div class="ad_label left_div">Add: </div>
+        <a class="left_div ad-link" href="{{url}}">{{text}}</a>
+    </div>
+</div>
+{{/with}}
+
+{{/with}}

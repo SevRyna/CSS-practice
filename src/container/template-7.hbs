@@ -1,0 +1,52 @@
+{{!--
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+--}}
+
+<body>
+    <div class="container">
+
+        {{> headerDark}}
+
+        <section class="hero">
+
+            <h1>{{hero.title}}</h1>
+            <h4>{{hero.description}}</h4>
+            <a type="button" href="{{hero.button.url}}" alt="example">{{hero.button.text}}</a>
+
+        </section>
+        <section class="about">
+            <h3 class="heading">{{about.heading}}</h3>
+            <p class="info">{{about.info}}</p>
+        </section>
+
+
+        <section class="articles">
+            <div class="articles_top">
+                <h2>Our Articles</h2>
+                <button>View All</button>
+            </div>
+            <div class="articles_list">
+                {{#each articles}}
+                <div class="article">
+                    <img src='{{photo}}' alt="photo">
+
+                    {{#if isNew}}
+                    <label class="label_a">
+                        New
+                    </label>
+                    {{/if}}
+                    <strong>{{name}}</strong>
+                    <p>{{description}}</p>
+
+                    <a type="button" href="#" alt="example">Reset All</a>
+
+                </div>
+                {{/each}}
+            </div>
+        </section>
+
+        {{> footerDark}}
+    </div>
+
+</body>
