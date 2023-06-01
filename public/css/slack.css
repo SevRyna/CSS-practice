@@ -5,6 +5,7 @@ main,
 adaptive;
 
 
+
 @font-face {
     font-family: 'HelveticaNeueBold';
     src: url('/font/HelveticaNeueBold.ttf');
@@ -76,7 +77,7 @@ adaptive;
     .icon_arrow {
         height: 14px;
         width: 24px;
-        background-image: url('/svg/arrow-right.svg');
+        background-image: url('/cvg/feature/arrow-right.svg');
     }
 }
 
