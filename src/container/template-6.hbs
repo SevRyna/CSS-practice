@@ -1,0 +1,99 @@
+{{!--
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+--}}
+<header class="header">
+    <div class="">
+        {{> logo}}
+    </div>
+
+    <nav1 class="header_nav1">
+        <div class="header_nav1_right">
+            {{>nav1 list=header}}
+        </div>
+    </nav1>
+</header>
+
+<main class="main">
+    <div class="col-lg-7">
+        <div class="info">
+            <h1 class="info_title">{{info.title}}</h1>
+            <p class="info_description">{{info.description}}</p>
+        </div>
+    </div>
+
+    {{#with form}}
+    <form class="form">
+        <div class="form_input">
+            {{#each inputs}}
+            <input type="{{type}}" placeholder="{{placeholder}}" class="form_input" name="{{name}}"
+                id="form_input-{{id}}" />
+            {{/each}}
+        </div>
+        <div class="form_checkbox">
+            <input type="checkbox" name="{{checkbox}}" id="{{checkbox.name}}">
+            <div></div>
+            <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+        </div>
+        <button type="submit" class="form_button">{{button}}</button>
+        <p class="form_info">{{info}}</p>
+    </form>
+
+    {{/with}}
+</main>
+
+{{#with updates}}
+<div class="updates">
+    <h1 class="updates_title">{{title}}</h1>
+    <table>
+        {{#each list}}
+        <tr>
+            <td class="cb cb-{{@index}}">
+                <div class="color_box">
+                </div>
+            </td>
+            <td>
+                <div class="text_box">
+                    <strong class="updates_nickname">{{nickname}}</strong>
+                    <br>
+                    <div class="updates_description">{{description}}</div>
+
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+
+    <a href="#" class="updates_link">All updates</a>
+</div>
+{{/with}}
+
+{{#with expirience}}
+<div class="expirience">
+    <h1 class="expirience_title">{{title}}</h1>
+    <p class="expirience_badge">{{badge}}</p>
+
+    <div class="expirience-item">
+        {{#each list}}
+        <div class="list_i">
+            <strong class="expirience_name">{{name}}</strong>
+            <p class="expirience_details">{{details}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/with}}
+
+
+<footer class="footer">
+    <div>
+        {{> logo}}
+        <span class="footer_copyright">Copyright 2023-2024</span>
+    </div>
+    {{#each footer}}
+    <div>
+        <span class="footer_title">{{title}}</span>
+        {{>nav1 list=links isVertical=true}}
+    </div>
+    {{/each}}
+</footer>
