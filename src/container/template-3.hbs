@@ -16,24 +16,28 @@
 </header>
 
 {{#with hero}}
-<div class="hero">
-    <div class="hero_content">
-        <h1 class="hero_title">{{title}}</h1>
-        <p class="hero_text">{{text}}</p>
-    </div>
-    <div class="hero_slider">
-        <div class="hero_slider_icon hero_slider_left">{{left}}</div>
-        <img src="{{photo}}" alt="hero image" class="hero_image">
-        <div class="hero_slider_icon hero_slider_right">{{right}}</div>
+<div class="hero_container">
+    <div class="hero">
+        <div class="hero_content">
+            <h1 class="hero_title">{{title}}</h1>
+            <p class="hero_text">{{text}}</p>
+        </div>
+        <div class="hero_slider">
+            <div class="hero_slider_icon hero_slider_left">{{left}}</div>
+            <img src="{{photo}}" alt="hero image" class="hero_image">
+            <div class="hero_slider_icon hero_slider_right">{{right}}</div>
+        </div>
     </div>
 </div>
 {{/with}}
 
-<div class="modal">
+{{!--<input type="text" class="input">--}}
+
+{{!--<div class="modal">
     {{hero.text}} {{hero.text}}
-    {{!--<img src="{{hero.photo}}" alt="hero image" class="hero_image">--}}
+    {{!--<img src="{{hero.photo}}" alt="hero image" class="hero_image">
     {{hero.text}} {{hero.text}}
-</div>
+</div>--}}
 
 <main class="blog">
     {{#each blog}}
