@@ -308,6 +308,7 @@ body {
     .feature_head {
         position: absolute;
         top: 0;
+
     }
 
     .feat_card {
@@ -321,6 +322,17 @@ body {
 
         grid-template-rows: min-content min-content 1fr min-content;
     }
+
+
+    .page_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 106px;
+        left: 457px;
+
+    }
+
 
     .page_section_homework_needs .features_title {
         font-size: var(--size-6);
