@@ -1,3 +1,7 @@
+.cleat {
+    clear: both;
+}
+
 @layer normalize,
 block,
 element,
@@ -126,7 +130,7 @@ body {
 
     .header {
         background-color: var(--color-white);
-        padding: var(--size-1);
+        padding: var(--size-1) var(--spacing-9);
     }
 
     .layout {
@@ -150,15 +154,190 @@ body {
 
     .analytic {
         border-radius: 8px;
-        padding: var(--spacing-5);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: grid;
+        padding: var(--spacing-2);
+        gap: var(--spacing-1);
+        font-size: var(--size-2);
+        line-height: var(--line-height);
+    }
+
+    .analytic span {
+        width: 44px;
+        height: 44px;
+    }
+
+    .analytic.analytic--double.a {
+        background-color: #5b39ad;
+    }
+
+    .analytic.analytic--double.b {
+        background-color: var(--color-blue-light);
+    }
+
+    .analytic.c {
+        background-color: var(--color-blue-light);
+    }
+
+    .analytic.d {
+        border: 1px solid var(--color-light)
+    }
+
+    .feat_card_title {
+        color: var(--color-white);
+    }
+
+    .d .feat_card_title {
+        color: var(--color-black);
     }
 
 }
+
+.refs img {
+    width: 32px;
+    height: 32px;
+    margin: 10px 0 10px 22px;
+    margin: 0 0 0 22px;
+}
+
+.pp {
+    margin-top: 20px;
+}
+
+.features_grid_2 {
+    width: 820px;
+}
+
+.features_grid_2 .table {
+    width: 810px;
+}
+
+.features_grid_2 td {
+    margin-bottom: 20px;
+}
+
+.pp {
+    grid-area: pp;
+}
+
+.block {
+    grid-area: block;
+}
+
+.pp0 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pp {
+    border-radius: 10px;
+    width: auto;
+}
+
+.block {
+    border-radius: 10px;
+    background-color: var(--color-white);
+    padding: 0 15px;
+    width: 450px;
+}
+
+.pp0 {
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.pp,
+.block {
+    margin-top: 10px;
+}
+
+.pu-head {
+    background-color: var(--color-white);
+    padding: 10px 0 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.block .pu-head {
+    padding: 10px 0 10px 0;
+}
+
+.pu-input {
+    padding-top: 3px;
+}
+
+.form_input {
+    width: inherit;
+    width: 90%;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    border: 1px solid darkgray;
+    height: 20px;
+    font-size: 83%;
+    font-weight: bold;
+    font-weight: bolder;
+}
+
+.sele {
+    width: 120px;
+}
+
+.block label {
+    font-size: 90%;
+}
+
+.but-block {
+    display: flex;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: var(--spacing-3);
+    background-color: var(--color-white);
+    padding: 10px;
+}
+
+.inp label {
+    font-size: 80%
+}
+
+.ppp {
+    line-height: 20px;
+    font-size: 84%;
+    padding-left: 5px;
+}
+
+
+.ppp span {
+    padding-top: 6px;
+}
+
+.pp hr,
+.block hr {
+    border: 1px solid #b3aeae;
+    margin: 0;
+}
+
+.form_button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 80%;
+}
+
+.features_grid_4,
+.features_grid_41 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: var(--spacing-3);
+    background-color: var(--color-white);
+    padding: 10px;
+}
+
 
 @layer element {
     .page_aside {
@@ -197,6 +376,7 @@ body {
         position: absolute;
         top: calc(50%-(20px / 2));
         left: var(--spacing-2);
+        top: 10px;
     }
 
     .icon--header-setting {
@@ -217,10 +397,45 @@ body {
         cursor: pointer;
     }
 
+    .icon.analytic_circle {
+        position: absolute;
+        top: 76px;
+        left: 70px;
+    }
+
+    .icon.analytic_arrow {
+        position: absolute;
+        top: 76px;
+        left: 70px;
+    }
+
+    .a {
+        grid-area: a;
+        position: relative;
+    }
+
+    .b {
+        grid-area: b;
+    }
+
+    .c {
+        grid-area: c;
+    }
+
+    .d {
+        grid-area: d;
+
+    }
+
     .analytic_block {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr;
+        gap: var(--spacing-3);
+        grid-template-areas:
+            "a b c"
+            "a b d";
+
     }
 
     .analytic_button {
@@ -284,10 +499,6 @@ body {
 
     }
 
-    /* .vertical--big {
-        gap: var(--spacing-5);
-    }*/
-
     .vertical_1 {
         gap: var(--spacing-2);
 
@@ -302,10 +513,15 @@ body {
     }
 
     .field--header {
+        position: relative;
         padding-left: 44px;
         padding-right: 44px;
         width: 100%;
-        height: 52px;
+        height: 36px;
+        background-image: url("/svg/header/search.svg");
+        background-repeat: no-repeat;
+        background-size: 32px 32px;
+        background-position: right;
     }
 
     .field--header::placeholder {
@@ -318,6 +534,9 @@ body {
 
     .icon--color-blue {
         background-color: var(--color-blue-dark);
+        position: absolute;
+        left: 351px;
+        top: -4px;
     }
 
     .field--select {
@@ -333,11 +552,16 @@ body {
     .analytic--blue {
         background-color: var(--color-blue-light);
     }
+
+    .analytic.c,
+    .analytic.d {
+        display: flex;
+    }
 }
 
 @layer adaptive {
 
-    @media all and (width<=1000px) {
+    @media all and (width<=1100px) {
         .page--dashboard {
             grid-template-columns: 1fr;
         }
@@ -350,5 +574,62 @@ body {
             display: none;
         }
 
+        .block {
+            width: 340px !important;
+        }
+
     }
+
+    @media all and (width <=750px) {
+        .block {
+            width: 340px !important;
+        }
+
+        .features_grid_41 {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+
+    @media all and (width <=600px) {
+        .page--dashboard {
+            grid-template-columns: 1fr;
+        }
+
+        .analytic_block {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: var(--spacing-3);
+            grid-template-areas:
+                "a b "
+                "a b "
+                "c d ";
+        }
+
+        .pp0 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: var(--spacing-3);
+            grid-template-areas:
+                "pp"
+                "block";
+
+        }
+
+        .features_grid_41 {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+
+        .but-block {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+
+        .block {
+            width: 188px !important;
+        }
+    }
+
+    @media all and (width < 400px) {}
+
+    @media all and (width<=360px) {}
 }
